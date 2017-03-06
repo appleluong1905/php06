@@ -1,0 +1,31 @@
+.logo{
+	float: left;
+}
+h1{
+	color: yellow;
+}
+.slogan{
+	color: green;
+	font-weight: bold;
+}
+.list-speaker{
+	margin-left: 130px;
+}
+.senior{
+	color: yellow;
+	font-weight: bold;
+}
+.junior{
+	color: green;
+	font-weight: bold;
+}
+h2{
+	margin-left: 100px;
+}
+.show-looking{
+	margin-left: 100px;
+}
+.copy-right{
+	float: right;
+	padding-right: 100px;
+}
