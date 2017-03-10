@@ -29,3 +29,13 @@ h2{
 	float: right;
 	padding-right: 100px;
 }
+
+a:hover{
+	color: blue;
+}
+a{
+	text-decoration: none;
+}
+ul li{
+	list-style-image: url('favicon.ico');
+}

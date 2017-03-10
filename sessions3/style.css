@@ -1,12 +1,15 @@
 body{
+	background: linear-gradient(red, green);
 	border: 3px dotted black;
 	margin: 10px;
 }
 section{
 	border: 2px solid black;
-	width: 500px;
+	/*width: 500px;*/
 	margin: 20px;
 	padding: 10px;
+	border-radius: 10px 0 20px 50px;
+	box-shadow: 3px 3px 3px 3px green;
 }
 h1,p{
 	border: 3px solid red;
@@ -20,4 +23,9 @@ p{
 	margin: 0;
 	padding-left: 25px;
 	padding-right: 16px;
+}
+@media screen and (max-width: 768px){
+	body{
+		background: linear-gradient(yellow, blue);
+	}
 }
