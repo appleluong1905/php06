@@ -2,6 +2,7 @@ body{
 	background: linear-gradient(red, green);
 	border: 3px dotted black;
 	margin: 10px;
+	width: 90%;
 }
 section{
 	border: 2px solid black;

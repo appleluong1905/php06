@@ -1,0 +1,16 @@
+body{
+	background: linear-gradient(red, green) no-repeat;
+	width: 90%;
+	background-attachment: fixed;
+}
+.slider{
+	width: 70%;
+	padding-left: 20%;
+
+}
+@media screen and (max-width: 768px){
+	body{
+		background: linear-gradient(yellow, blue);
+		background-attachment: fixed;
+	}
+}

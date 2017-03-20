@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>San Joaquin Valley Town Hall | speakers and luncheons</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Test HTML5">
+		<meta name="keywords" content="Test HTML5">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+	<section>
+		<h1>San Joaquin Valley Town Hall</h1>
+		<p>Welcome to San Joaquin Valley Town Hall
+		We have some fascinating speakers for you this season!
+		</p>
+		<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>
+			Click Me!
+		</button>
+
+		<p id="demo"></p>
+
+		<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+		<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+		<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+		<p id="demo1">Hello PHP06</p>
+		<button type="button" onclick="myFunction()">Try it</button>
+	</section>
+	<script>
+		function myFunction() {
+		    document.getElementById("demo1").innerHTML = "Welcome PHP06";
+		}
+	</script>
+	</body>
+</html>
