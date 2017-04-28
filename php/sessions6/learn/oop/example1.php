@@ -1,49 +1,63 @@
 <?php
+// Human
 class Human{
 
-	private $name;
+	public  $name = "ACB"; // public/private/protected
 	public  $age;
 
-	public function __construct(){
-		$this->name = "Chad";
-		$this->age = 29;
-
-	}
-	public function setName($newName){
+	public function setName($newName){ // public/private/protected
 		$this->name = $newName;
 	}
 
-	protected function demo(){
-		return "Demo";
-	}
 	public function getName(){
-		$demo = $this->demo();
-		return $this->name.' '.$demo;
+		return $this->name;
 	}
 } 
-	$human = new Human();
-	echo $human->getName();
-	echo "<br/>";
-	$human->setName('Canh');
-	echo $human->getName();
-	echo "<br/>";
-	echo $human->age;
-	//not working
-	//echo $human->demo();
-	
+
+//Student
 class Student extends Human{
-	public $idStudent = 233;
-	public function showMember(){
-		return $this->demo()." all members";
+	public $id;
+	public function setID($id){
+		$this->id = $id;
+	}
+	public function getID(){
+		return $this->id;
 	}
 }
 
-	$student = new Student();
-	//var_dump($student);
-	$student->setName('Nam');
-	echo "<br/>";
-	echo $student->getName();
-	echo "<br/>";
-	echo $student->idStudent;
-	echo "<br/>";
-	echo $student->showMember();
+
+$student = new Student();
+
+$student->setName('Chad');
+
+echo $student->getName();
+
+
+
+echo "<br/>";
+
+$student->setID(12345);
+
+echo $student->getID();
+
+
+
+$human = new Human();
+echo "<br/>";
+
+$human->setID(66666);
+
+echo $human->getID();
+
+// $human = new Human();
+
+// $human->setName('Chad');
+
+// echo $human->getName();
+
+
+
+
+
+
+//var_dump($human);
