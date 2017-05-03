@@ -1,3 +1,4 @@
+/* lay tat cac san pham tu bang products*/
 SELECT * FROM products;
 
 SELECT productID, productName, listPrice
