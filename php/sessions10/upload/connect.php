@@ -1,9 +1,13 @@
-<?php
-$mysql_hostname = "localhost";
-$mysql_user = "root";
-$mysql_password = "none";
-$mysql_database = "upload_image";
-$prefix = "";
-$bd = mysql_connect($mysql_hostname, $mysql_user, $mysql_password) or die("Could not connect database");
-mysql_select_db($mysql_database, $bd) or die("Could not select database");
+<?php 
+$servername = "localhost";
+$username = "root";
+$password = "none";
+$dbname   = "upload_image";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 ?>

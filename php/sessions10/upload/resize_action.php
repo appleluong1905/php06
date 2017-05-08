@@ -62,7 +62,7 @@ if ((isset($_POST["submitted_form"])) && ($_POST["submitted_form"] == "image_upl
 			}		
 			
 			include('connect.php');
-			mysql_query("INSERT INTO images (images, height, width) VALUES ('$remote_file','$new_height','$new_width')");
+			$conn->query("INSERT INTO images (images, height, width) VALUES ('$remote_file','$new_height','$new_width')");
 			$new_image = imagecreatetruecolor($new_width , $new_height);
 			$image_source = imagecreatefromjpeg($remote_file);
 			
