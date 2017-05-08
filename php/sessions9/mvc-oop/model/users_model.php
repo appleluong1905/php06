@@ -2,35 +2,35 @@
 
 require_once 'model/users_function.php';
 require_once 'model/validation_exception.php';
+require_once 'model/connect_database.php';
 
 
-class UsersModel {
-    
+class UsersModel extends Connect {
+
     private $usersFunction    = NULL;
     
     private function openDb() {
-        if (!mysql_connect("localhost", "root", "none")) {
+        if (!$this->conn) {
             throw new Exception("Connection to the database server failed!");
         }
-        if (!mysql_select_db("mvc_oop")) {
+        if (!$this->conn) {
             throw new Exception("No mvc_oop database found on database server.");
         }
     }
     
     private function closeDb() {
-        mysql_close();
+        mysqli_close($this->conn);
     }
   
     public function __construct() {
+        parent::__construct();
         $this->usersFunction = new UsersFunction();
     }
     
     public function getAllUsers($order) {
         try {
             $this->openDb();
-
             $res = $this->usersFunction->selectAll($order);
-            
             $this->closeDb();
             return $res;
         } catch (Exception $e) {

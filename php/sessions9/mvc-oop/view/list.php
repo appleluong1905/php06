@@ -18,8 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-            <?php
-             foreach ($users as $user): ?>
+            <?php foreach ($users as $user): ?>
                 <tr>
                     <td><a href="index.php?op=show&id=<?php print $user->id; ?>"><?php print htmlentities($user->name); ?></a></td>
                     <td><?php print htmlentities($user->phone); ?></td>
