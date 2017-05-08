@@ -28,7 +28,9 @@ class UsersModel {
     public function getAllUsers($order) {
         try {
             $this->openDb();
+
             $res = $this->usersFunction->selectAll($order);
+            
             $this->closeDb();
             return $res;
         } catch (Exception $e) {

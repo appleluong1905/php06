@@ -13,7 +13,6 @@ class UsersFunction {
         while ( ($obj = mysql_fetch_object($dbres)) != NULL ) {
             $users[] = $obj;
         }
-        
         return $users;
     }
     

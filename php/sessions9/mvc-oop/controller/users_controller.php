@@ -15,11 +15,13 @@ class UsersController {
     }
     
     public function handleRequest() {
+
         $op = isset($_GET['op'])?$_GET['op']:NULL;
         try {
             if ( !$op || $op == 'list' ) {
                 $this->listUsers();
             } elseif ( $op == 'new' ) {
+                //o day
                 $this->saveUser();
             } elseif ( $op == 'delete' ) {
                 $this->deleteUser();
@@ -35,9 +37,13 @@ class UsersController {
     }
     
     public function listUsers() {
+
         $orderby = isset($_GET['orderby'])?$_GET['orderby']:NULL;
+
         $users = $this->usersModel->getAllUsers($orderby);
+
         include 'view/list.php';
+
     }
     
     public function saveUser() {
