@@ -76,7 +76,7 @@ if ((isset($_POST["submitted_form"])) && ($_POST["submitted_form"] == "image_upl
 		imagedestroy($image_source);
 		
 		
-		header("Location: ok.php");
+		return 
 		exit;
 	}
 	else{
